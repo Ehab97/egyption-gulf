@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Cairo&display=swap&subset=arabic,latin-ext");
+body {
+  background-color: #F5F6F8;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+.login-content,
+.signup-content {
+  margin: 50px auto;
+}
+
+.login-content img,
+.signup-content img {
+  margin-bottom: 50px;
+}
+
+.login-content form,
+.signup-content form {
+  padding: 50px;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #FFF;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.06);
+}
+
+.login-content form h3,
+.signup-content form h3 {
+  margin-bottom: 50px;
+  color: #192A3E;
+  font-size: 24px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+.login-content form .form-group,
+.signup-content form .form-group {
+  margin-bottom: 50px;
+}
+
+.login-content form .form-group label,
+.signup-content form .form-group label {
+  font-weight: 600;
+  color: #192A3E;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: right;
+}
+
+.login-content form .form-group .form-control,
+.signup-content form .form-group .form-control {
+  height: 46px;
+  border-radius: 4px;
+  background-color: #FFF;
+  border: 2px solid rgba(51, 77, 110, 0.5);
+}
+
+.login-content form .form-group .btn-success,
+.signup-content form .form-group .btn-success {
+  background-color: #2ED47A;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 15px;
+  border: none;
+  padding: 8px 0;
+}
+
+.login-content form .form-check,
+.signup-content form .form-check {
+  margin-bottom: 50px;
+}
+
+.login-content form .form-check label,
+.signup-content form .form-check label {
+  color: #334D6E;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: right;
+  font-weight: 700;
+  margin-right: 32px;
+}
+
+.login-content form .form-check .form-check-input,
+.login-content form .form-check input,
+.signup-content form .form-check .form-check-input,
+.signup-content form .form-check input {
+  box-sizing: border-box;
+  height: 22px;
+  width: 22px;
+  border-radius: 4px;
+  background-color: #FFF;
+  border: 1.5px solid rgba(51, 77, 110, 0.5);
+}
+
+.login-content form .form-check .custom-control-label:before,
+.signup-content form .form-check .custom-control-label:before {
+  background-color: #FFF;
+}
+
+.login-content form .text,
+.signup-content form .text {
+  text-align: center;
+}
+
+.login-content form .text p,
+.signup-content form .text p {
+  color: #334D6E;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.login-content form .text p a,
+.signup-content form .text p a {
+  text-decoration: none;
+  color: #2ED47A;
+}
+
+@media only screen and (max-width: 1024px) {
+  .login-content form,
+  .signup-content form {
+    width: 95%;
+    padding: 30px 30px;
+  }
+  .login-content form h3,
+  .signup-content form h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login-content form,
+  .signup-content form {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  .login-content form h3,
+  .signup-content form h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .login-content form,
+  .signup-content form {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  .login-content form h3,
+  .signup-content form h3 {
+    font-size: 20px;
+  }
+}

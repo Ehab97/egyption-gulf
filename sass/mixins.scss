@@ -1,0 +1,30 @@
+@mixin body {
+    @import url('https://fonts.googleapis.com/css?family=Cairo&display=swap&subset=arabic,latin-ext');
+    body {
+        background-color: $white;
+        font-family: 'Cairo', sans-serif;
+        direction: rtl;
+    }
+}
+
+//media query
+$mobile-width:599px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
