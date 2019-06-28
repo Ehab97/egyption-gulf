@@ -7,24 +7,192 @@
     }
 }
 
-//media query
-$mobile-width:599px;
-$tablet-width: 768px;
-$desktop-width: 1024px;
-@mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-        @content;
+@mixin active {
+    height: 44px;
+    border-radius: 24px 0 0 24px;
+    background-color: rgba(46, 212, 122, 0.08);
+    color: #2ED47A;
+    transition: .5s ease-in-out;
+    border-right: 5px solid #2ED47A !important;
+    a {
+        color: #2ED47A;
+        i {
+            color: #2ED47A;
+        }
+    }
+    @media screen and (max-width: 590px) {
+        width: 14vh;
+        height: 30px;
     }
 }
 
-@mixin desktop {
-    @media (min-width: #{$desktop-width}) {
-        @content;
+@mixin sidebar {
+    background-color: #FFF;
+    box-shadow: -6px 0 18px 0 rgba(0, 0, 0, 0.06);
+    padding: 15px 0;
+    height: 100vh;
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 100;
+    /* Stay on top */
+    top: 0;
+    right: 0;
+    /*
+        overflow: hidden;
+    right: 0;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    */
+    aside {
+        img {
+            margin-bottom: 15px;
+        }
+        hr {
+            background-color: #EBEFF2;
+        }
+        ul {
+            margin: 30px 0px 30px 30px;
+            li {
+                margin-right: -40px;
+                height: 44px;
+                width: 100%;
+                margin-bottom: 30px;
+                border-radius: 24px 0 0 24px;
+                line-height: 2.5;
+                padding-right: 5px;
+                border-right: 5px solid transparent;
+                a {
+                    text-decoration: none;
+                    color: #334D6E;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    .fa {
+                        color: #334D6E;
+                        margin-left: 15px;
+                    }
+                }
+                &:hover {
+                    @include active;
+                    // a {
+                    //     color: #2ED47A;
+                    // }
+                }
+            }
+        }
+    }
+    @media screen and(min-width:1024px) and (max-width: 1366px) {
+        img {
+            width: 70%;
+        }
+        aside ul li {
+            width: 170%;
+        }
+    }
+    @media screen and(min-width:677px) and (max-width: 1023px) {
+        aside img {
+            margin-bottom: 10px;
+            width: 75%;
+        }
+        aside ul li {
+            width: 210%;
+            font-size: 12px;
+            line-height: 3.5;
+            margin-bottom: 10px;
+        }
+        aside ul li a .fa {
+            color: #334D6E;
+            margin-left: 5px;
+        }
+    }
+    @media screen and (min-width:401px) and (max-width: 676px) {
+        aside img {
+            margin-bottom: 10px;
+            width: 75%;
+        }
+        aside ul li {
+            width: 12vh;
+            font-size: 7px;
+            line-height: 4.5;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        .home .col-2 aside ul li a .fa {
+            color: #334D6E;
+            margin-left: 5px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        aside img {
+            margin-bottom: 10px;
+            width: 75%;
+        }
+        aside ul li {
+            width: 14vh;
+            font-size: 6px;
+            line-height: 4.5;
+            height: 25px;
+            margin-bottom: 7px;
+        }
+        .home .col-2 aside ul li a .fa {
+            color: #334D6E;
+            margin-left: 5px;
+        }
     }
 }
 
-@mixin mobile {
-    @media (max-width: #{$mobile-width}) {
-        @content;
+@mixin header {
+    .bg-light {
+        // box-shadow: 0 1px 3px -3px #80808000;
+        background-color: #fff!important;
+        height: 60px;
+        position: fixed;
+        /* Set the navbar to fixed position */
+        top: 0;
+        /* Position the navbar at the top of the page */
+        width: 100%;
+        z-index: 99;
+        padding: 17px 60px;
+        /**
+        position: absolute;
+    top: 0px;
+    left: 0;
+    height: 60px;
+    right: 250px;
+    overflow: hidden;
+        */
+        ul {
+            li {
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    letter-spacing: 0;
+                    line-height: 26px;
+                    color: #334D6E;
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    margin-bottom: 60px;
+    @media screen and (max-width: 1366px) {}
+    @media screen and (max-width: 1024px) {}
+    @media screen and (max-width: 590px) {
+        .bg-light {
+            padding: 17px 10px;
+        }
+        .bg-light ul li a {
+            font-size: 12px;
+        }
     }
 }
+
+@media screen and (max-width: 1366px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 590px) {}
