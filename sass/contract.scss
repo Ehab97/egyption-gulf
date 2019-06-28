@@ -1,0 +1,98 @@
+    @import 'variables';
+    @import 'mixins';
+    //body
+    @include body;
+    .active {
+        @include active;
+        a {
+            color: #2ED47A;
+        }
+    }
+    
+    .home {
+        padding: 0;
+        .col-2 {
+            @include sidebar;
+        }
+        .col-10 {
+            header {
+                @include header;
+            }
+            .content {
+                position: relative;
+                z-index: 90;
+                left: -25%;
+                top: 60px;
+                bottom: 60px;
+                width: 90%;
+                table {
+                    .l {
+                        width: 60% !important;
+                    }
+                    @include table;
+                }
+                .head {
+                    @include head;
+                    .form-group,
+                    .btn {
+                        width: 23%;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1366px) {}
+    
+    @media screen and (max-width: 1024px) {
+        .col-10 .content .head .btn {
+            font-size: 12px !important;
+        }
+        .home .col-10 .content table .l {
+            width: 100% !important;
+            font-size: 12px !important;
+        }
+    }
+    
+    @media screen and (max-width: 590px) {
+        .home .col-10 .content {
+            left: -28%;
+            contain: content;
+            object-fit: contain;
+        }
+        .home .col-2 {
+            flex: 0 0 24.666667%;
+            max-width: 24.666667%;
+        }
+        .home .col-10 .content table .l {
+            font-size: 8px !important;
+            width: 90% !important;
+            margin: 35% auto;
+        }
+        .head .btn {
+            font-size: 10px !important;
+        }
+        .home .col-2 aside ul li {
+            width: 14vh;
+            ;
+        }
+        .home .col-10 header .bg-light ul {
+            margin: 0 auto;
+            text-align: center
+        }
+        .home .col-10 header .bg-light .mr-auto {
+            // margin-right: 0 !important;
+            text-align: center;
+        }
+        .home .col-10 .content table .btn-outline-info,
+        .home .col-10 .content table .btn-outline-danger {
+            width: 95%;
+            padding: 5px;
+            margin: 10px auto;
+            font-size: 10px;
+        }
+        .home .col-10 .content table th,
+        .home .col-10 .content table td {
+            font-size: 8px;
+        }
+    }

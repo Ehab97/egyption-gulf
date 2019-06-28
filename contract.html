@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/agri.css">
+    <link rel="stylesheet" href="css/contract.css">
     <link rel="shortcut icon" href="images/favicon/logo.png">
-    <title>agriculture</title>
+    <title>contract</title>
 </head>
 
 <body>
@@ -29,9 +29,9 @@
                         <ul class="list-unstyled">
                             <li><a href="home.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>الصفحه الرئيسيه</a></li>
                             <li><a href="renters.html"><i class="fa fa-users fa-lg" aria-hidden="true"></i>المستاجرين</a></li>
-                            <li class="active"><a href="agri.html" style="color: #2ED47A"><i style="color: #2ED47A"   class="fa fa-map-marker fa-lg" aria-hidden="true"></i>الاراضي الزارعيه</a></li>
-                            <li><a href="contract.html"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i>العقود</a></li>
-                            <li><a href=""><i class="fa fa-money fa-lg" aria-hidden="true"></i>الالحسابات الماليه</a></li>
+                            <li><a href="agri.html"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>الاراضي الزارعيه</a></li>
+                            <li class="active"><a href="contract.html" style="color: #2ED47A"><i style="color: #2ED47A" class="fa fa-file-text-o fa-lg" aria-hidden="true"></i>العقود</a></li>
+                            <li><a href="benfits.html"><i class="fa fa-money fa-lg" aria-hidden="true"></i>الالحسابات الماليه</a></li>
                         </ul>
                     </aside>
                 </div>
@@ -59,20 +59,22 @@
                                 <div class="col-12">
                                     <div class="head">
                                         <div class="form-group">
-                                            <label>موقع الارض / العنوان</label>
+                                            <label>رفع صورة للعقد</label>
                                             <input type="text" class="form-control">
                                         </div>
-
                                         <div class="form-group">
-                                            <label>حجم الارض</label>
+                                            <label>تاريخ بدأ العقد</label>
                                             <input type="text" class="form-control">
                                         </div>
-
+                                        <div class="form-group">
+                                            <label>تاريخ إنتهاء العقد</label>
+                                            <input type="text" class="form-control">
+                                        </div>
                                         <button class="btn btn-info">
-                                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                إضافة مستأجر جديد
-                                                
-                                        </button>
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                            إضافة عقد جديدة
+                                                        
+                                                </button>
                                     </div>
                                 </div>
                             </div>
@@ -82,18 +84,22 @@
                                         <thead class="thead-light">
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">موقع الارض / العنوان</th>
-                                                <th scope="col">موقع الارض / العنوان</th>
+                                                <th scope="col">صورة العقد</th>
+                                                <th scope="col">تاريخ بدا العقد</th>
+                                                <th scope="col">تاريخ انتهاء العقد</th>
                                                 <th scope="col">حذف/اضافه</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
+                                                <td>
+                                                    <button class="btn btn-outline-info l"><span class="d-block">عرض</span> <span class="d-block"> لعقد</span> اصورة </button>
+                                                </td>
                                                 <td></td>
                                                 <td></td>
                                                 <td class="text-center">
-                                                    <button class="btn btn-outline-info"><span>اضافه</span></button>
+                                                    <button class="btn btn-outline-info">اضافه</button>
                                                     <button class="btn btn-outline-danger">حذف</button>
                                                 </td>
                                             </tr>

@@ -155,48 +155,50 @@ body {
     top: 60px;
     bottom: 60px;
     width: 90%; }
-    .home .col-10 .content .table {
+    .home .col-10 .content table {
       text-align: center;
       border-radius: 4px;
       background-color: #fff;
       border: 1px solid rgba(46, 212, 122, 0.5); }
-      .home .col-10 .content .table th {
+      .home .col-10 .content table .l {
+        width: 60% !important; }
+      .home .col-10 .content table th {
         text-align: center;
         border: 1px solid rgba(46, 212, 122, 0.5); }
-      .home .col-10 .content .table td {
+      .home .col-10 .content table td {
         border: 1px solid rgba(46, 212, 122, 0.5);
         border-radius: 4px; }
-      .home .col-10 .content .table .btn {
+      .home .col-10 .content table .btn {
         cursor: pointer; }
-      .home .col-10 .content .table .btn-outline-info {
+      .home .col-10 .content table .btn-outline-info {
         border-radius: 4px;
         background-color: #FFF;
         border: 2px solid #2ED47A;
         color: #2ED47A;
         width: 40%; }
-        .home .col-10 .content .table .btn-outline-info:hover {
+        .home .col-10 .content table .btn-outline-info:hover {
           color: #2ED47A; }
-      .home .col-10 .content .table .btn-outline-danger {
+      .home .col-10 .content table .btn-outline-danger {
         width: 40%;
         border-radius: 4px;
         background-color: #FFF;
         border: 2px solid #F76858;
         color: #F76858; }
-        .home .col-10 .content .table .btn-outline-danger:hover {
+        .home .col-10 .content table .btn-outline-danger:hover {
           color: #F76858; }
       @media screen and (max-width: 1024px) {
-        .home .col-10 .content .table .btn-outline-info,
-        .home .col-10 .content .table .btn-outline-danger {
+        .home .col-10 .content table .btn-outline-info,
+        .home .col-10 .content table .btn-outline-danger {
           width: 45%;
           padding: 10px; } }
       @media screen and (max-width: 590px) {
-        .home .col-10 .content .table .btn-outline-info,
-        .home .col-10 .content .table .btn-outline-danger {
+        .home .col-10 .content table .btn-outline-info,
+        .home .col-10 .content table .btn-outline-danger {
           width: 95%;
           padding: 8px;
           margin: 10px auto; }
-        .home .col-10 .content .table th,
-        .home .col-10 .content .table td {
+        .home .col-10 .content table th,
+        .home .col-10 .content table td {
           font-size: 10px; } }
     .home .col-10 .content .head .form-group {
       display: inline-block;
@@ -233,24 +235,52 @@ body {
         margin-left: 0; } }
     .home .col-10 .content .head .form-group,
     .home .col-10 .content .head .btn {
-      width: 30%; }
+      width: 23%; }
 
+@media screen and (max-width: 1024px) {
+  .col-10 .content .head .btn {
+    font-size: 12px !important; }
+
+  .home .col-10 .content table .l {
+    width: 100% !important;
+    font-size: 12px !important; } }
 @media screen and (max-width: 590px) {
   .home .col-10 .content {
-    left: -28%; }
+    left: -28%;
+    contain: content;
+    object-fit: contain; }
 
   .home .col-2 {
     flex: 0 0 24.666667%;
     max-width: 24.666667%; }
 
-  .home .col-2 aside ul {
-    margin: 30px 0; }
+  .home .col-10 .content table .l {
+    font-size: 8px !important;
+    width: 90% !important;
+    margin: 35% auto; }
+
+  .head .btn {
+    font-size: 10px !important; }
+
+  .home .col-2 aside ul li {
+    width: 14vh; }
 
   .home .col-10 header .bg-light ul {
     margin: 0 auto;
     text-align: center; }
 
   .home .col-10 header .bg-light .mr-auto {
-    text-align: center; } }
+    text-align: center; }
 
-/*# sourceMappingURL=agri.css.map */
+  .home .col-10 .content table .btn-outline-info,
+  .home .col-10 .content table .btn-outline-danger {
+    width: 95%;
+    padding: 5px;
+    margin: 10px auto;
+    font-size: 10px; }
+
+  .home .col-10 .content table th,
+  .home .col-10 .content table td {
+    font-size: 8px; } }
+
+/*# sourceMappingURL=contract.css.map */
