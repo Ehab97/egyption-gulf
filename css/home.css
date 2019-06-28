@@ -35,15 +35,7 @@ body {
     z-index: 100;
     /* Stay on top */
     top: 0;
-    right: 0;
-    /*
-        overflow: hidden;
-    right: 0;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    z-index: 100;
-    */ }
+    right: 0; }
     .home .col-2 aside img {
       margin-bottom: 15px; }
     .home .col-2 aside hr {
@@ -104,7 +96,7 @@ body {
         margin-bottom: 10px;
         width: 75%; }
       .home .col-2 aside ul li {
-        width: 12vh;
+        width: 20vh;
         font-size: 7px;
         line-height: 4.5;
         height: 30px;
@@ -112,7 +104,7 @@ body {
       .home .col-2 .home .col-2 aside ul li a .fa {
         color: #334D6E;
         margin-left: 5px; } }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 410px) {
       .home .col-2 aside img {
         margin-bottom: 10px;
         width: 75%; }
@@ -128,6 +120,8 @@ body {
   .home .col-10 header {
     margin-bottom: 60px; }
     .home .col-10 header .bg-light {
+      -webkit-box-shadow: 0 4px 2px -2px rgba(204, 204, 204, 0.5);
+      box-shadow: 0 4px 2px -2px rgba(204, 204, 204, 0.5);
       background-color: #fff !important;
       height: 60px;
       position: fixed;
@@ -136,15 +130,7 @@ body {
       /* Position the navbar at the top of the page */
       width: 100%;
       z-index: 99;
-      padding: 17px 60px;
-    /**
-    position: absolute;
-top: 0px;
-left: 0;
-height: 60px;
-right: 250px;
-overflow: hidden;
-    */ }
+      padding: 17px 60px; }
       .home .col-10 header .bg-light ul li a {
         text-decoration: none;
         font-size: 14px;
@@ -157,7 +143,12 @@ overflow: hidden;
       .home .col-10 header .bg-light {
         padding: 17px 10px; }
       .home .col-10 header .bg-light ul li a {
-        font-size: 12px; } }
+        font-size: 12px; }
+      .home .col-10 header .home .col-10 header .bg-light ul {
+        margin: 0 auto;
+        text-align: center; }
+      .home .col-10 header .home .col-10 header .bg-light .mr-auto {
+        text-align: center; } }
   .home .col-10 .content {
     position: relative;
     z-index: 90;
@@ -249,6 +240,13 @@ overflow: hidden;
   .home .col-10 .content .activtes h4 {
     font-size: 16px; } }
 @media screen and (max-width: 590px) {
+  .home .col-10 header .bg-light ul {
+    margin: 0 auto;
+    text-align: center; }
+
+  .home .col-10 header .bg-light .mr-auto {
+    text-align: center; }
+
   .home .col-10 .content {
     left: -28%; }
 

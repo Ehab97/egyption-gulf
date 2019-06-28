@@ -136,6 +136,14 @@
 }
 
 @media screen and (max-width: 590px) {
+    .home .col-10 header .bg-light ul {
+        margin: 0 auto;
+        text-align: center
+    }
+    .home .col-10 header .bg-light .mr-auto {
+        // margin-right: 0 !important;
+        text-align: center;
+    }
     .home .col-10 .content {
         left: -28%;
     }

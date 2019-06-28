@@ -37,14 +37,6 @@
     /* Stay on top */
     top: 0;
     right: 0;
-    /*
-        overflow: hidden;
-    right: 0;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    z-index: 100;
-    */
     aside {
         img {
             margin-bottom: 15px;
@@ -76,9 +68,6 @@
                 }
                 &:hover {
                     @include active;
-                    // a {
-                    //     color: #2ED47A;
-                    // }
                 }
             }
         }
@@ -113,7 +102,7 @@
             width: 75%;
         }
         aside ul li {
-            width: 12vh;
+            width: 20vh;
             font-size: 7px;
             line-height: 4.5;
             height: 30px;
@@ -124,7 +113,7 @@
             margin-left: 5px;
         }
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 410px) {
         aside img {
             margin-bottom: 10px;
             width: 75%;
@@ -145,7 +134,8 @@
 
 @mixin header {
     .bg-light {
-        // box-shadow: 0 1px 3px -3px #80808000;
+        -webkit-box-shadow: 0 4px 2px -2px rgba(204, 204, 204, 0.5);
+        box-shadow: 0 4px 2px -2px rgba(204, 204, 204, 0.5);
         background-color: #fff!important;
         height: 60px;
         position: fixed;
@@ -155,14 +145,6 @@
         width: 100%;
         z-index: 99;
         padding: 17px 60px;
-        /**
-        position: absolute;
-    top: 0px;
-    left: 0;
-    height: 60px;
-    right: 250px;
-    overflow: hidden;
-        */
         ul {
             li {
                 a {
@@ -187,6 +169,72 @@
         }
         .bg-light ul li a {
             font-size: 12px;
+        }
+        .home .col-10 header .bg-light ul {
+            margin: 0 auto;
+            text-align: center
+        }
+        .home .col-10 header .bg-light .mr-auto {
+            // margin-right: 0 !important;
+            text-align: center;
+        }
+    }
+}
+
+@mixin table {
+    text-align: center;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid rgba(46, 212, 122, 0.5);
+    th {
+        text-align: center;
+        border: 1px solid rgba(46, 212, 122, 0.5);
+    }
+    td {
+        border: 1px solid rgba(46, 212, 122, 0.5);
+        border-radius: 4px;
+    }
+    .btn {
+        cursor: pointer;
+    }
+    .btn-outline-info {
+        border-radius: 4px;
+        background-color: #FFF;
+        border: 2px solid #2ED47A;
+        color: #2ED47A;
+        width: 40%;
+        &:hover {
+            color: #2ED47A;
+        }
+    }
+    .btn-outline-danger {
+        width: 40%;
+        border-radius: 4px;
+        background-color: #FFF;
+        border: 2px solid #F76858;
+        color: #F76858;
+        &:hover {
+            color: #F76858;
+        }
+    }
+    @media screen and (max-width: 1366px) {}
+    @media screen and (max-width: 1024px) {
+        .btn-outline-info,
+        .btn-outline-danger {
+            width: 45%;
+            padding: 10px;
+        }
+    }
+    @media screen and (max-width: 590px) {
+        .btn-outline-info,
+        .btn-outline-danger {
+            width: 95%;
+            padding: 8px;
+            margin: 10px auto;
+        }
+        th,
+        td {
+            font-size: 14px;
         }
     }
 }
