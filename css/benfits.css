@@ -22,6 +22,14 @@ body {
   .active a {
     color: #2ED47A; }
 
+.liActive {
+  background-color: rgba(46, 212, 122, 0.1);
+  height: 60px;
+  color: #2ED47A;
+  text-align: center;
+  border-bottom: 3px solid #2ED47A;
+  transition: .4s ease-in-out; }
+
 .home {
   padding: 0; }
   .home .col-2 {
@@ -148,6 +156,35 @@ body {
         text-align: center; }
       .home .col-10 header .home .col-10 header .bg-light .mr-auto {
         text-align: center; } }
+  .home .col-10 .navigate {
+    position: relative;
+    top: 65px;
+    right: 242px;
+    margin: 0 0 30px 0;
+    z-index: 98;
+    width: 102%;
+    background-color: #FFF;
+    height: 60px; }
+    .home .col-10 .navigate ul {
+      float: right;
+      height: 65px; }
+      .home .col-10 .navigate ul li {
+        cursor: pointer;
+        color: #334D6E;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        height: 60px;
+        width: 205px;
+        border-left: 1px solid rgba(128, 128, 128, 0.1);
+        border-right: 1px solid rgba(128, 128, 128, 0.1); }
+        .home .col-10 .navigate ul li:hover {
+          background-color: rgba(46, 212, 122, 0.1);
+          height: 60px;
+          color: #2ED47A;
+          text-align: center;
+          border-bottom: 3px solid #2ED47A;
+          transition: .4s ease-in-out; }
   .home .col-10 .content {
     position: relative;
     z-index: 90;
@@ -155,62 +192,102 @@ body {
     top: 60px;
     bottom: 60px;
     width: 90%; }
-    .home .col-10 .content .table {
+    .home .col-10 .content .benfits table,
+    .home .col-10 .content .paid table,
+    .home .col-10 .content .totalBenfits table {
       text-align: center;
       border-radius: 4px;
       background-color: #fff;
       border: 1px solid rgba(46, 212, 122, 0.5); }
-      .home .col-10 .content .table th {
+      .home .col-10 .content .benfits table .l,
+      .home .col-10 .content .paid table .l,
+      .home .col-10 .content .totalBenfits table .l {
+        width: 60% !important; }
+      .home .col-10 .content .benfits table th,
+      .home .col-10 .content .paid table th,
+      .home .col-10 .content .totalBenfits table th {
         text-align: center;
         border: 1px solid rgba(46, 212, 122, 0.5); }
-      .home .col-10 .content .table td {
+      .home .col-10 .content .benfits table td,
+      .home .col-10 .content .paid table td,
+      .home .col-10 .content .totalBenfits table td {
         border: 1px solid rgba(46, 212, 122, 0.5);
         border-radius: 4px; }
-      .home .col-10 .content .table .btn {
+      .home .col-10 .content .benfits table .btn,
+      .home .col-10 .content .paid table .btn,
+      .home .col-10 .content .totalBenfits table .btn {
         cursor: pointer; }
-      .home .col-10 .content .table .btn-outline-info {
+      .home .col-10 .content .benfits table .btn-outline-info,
+      .home .col-10 .content .paid table .btn-outline-info,
+      .home .col-10 .content .totalBenfits table .btn-outline-info {
         border-radius: 4px;
         background-color: #FFF;
         border: 2px solid #2ED47A;
         color: #2ED47A;
         width: 40%; }
-        .home .col-10 .content .table .btn-outline-info:hover {
+        .home .col-10 .content .benfits table .btn-outline-info:hover,
+        .home .col-10 .content .paid table .btn-outline-info:hover,
+        .home .col-10 .content .totalBenfits table .btn-outline-info:hover {
           color: #2ED47A; }
-      .home .col-10 .content .table .btn-outline-danger {
+      .home .col-10 .content .benfits table .btn-outline-danger,
+      .home .col-10 .content .paid table .btn-outline-danger,
+      .home .col-10 .content .totalBenfits table .btn-outline-danger {
         width: 40%;
         border-radius: 4px;
         background-color: #FFF;
         border: 2px solid #F76858;
         color: #F76858; }
-        .home .col-10 .content .table .btn-outline-danger:hover {
+        .home .col-10 .content .benfits table .btn-outline-danger:hover,
+        .home .col-10 .content .paid table .btn-outline-danger:hover,
+        .home .col-10 .content .totalBenfits table .btn-outline-danger:hover {
           color: #F76858; }
       @media screen and (max-width: 1024px) {
-        .home .col-10 .content .table .btn-outline-info,
-        .home .col-10 .content .table .btn-outline-danger {
+        .home .col-10 .content .benfits table .btn-outline-info,
+        .home .col-10 .content .benfits table .btn-outline-danger,
+        .home .col-10 .content .paid table .btn-outline-info,
+        .home .col-10 .content .paid table .btn-outline-danger,
+        .home .col-10 .content .totalBenfits table .btn-outline-info,
+        .home .col-10 .content .totalBenfits table .btn-outline-danger {
           width: 45%;
           padding: 10px; } }
       @media screen and (max-width: 590px) {
-        .home .col-10 .content .table .btn-outline-info,
-        .home .col-10 .content .table .btn-outline-danger {
+        .home .col-10 .content .benfits table .btn-outline-info,
+        .home .col-10 .content .benfits table .btn-outline-danger,
+        .home .col-10 .content .paid table .btn-outline-info,
+        .home .col-10 .content .paid table .btn-outline-danger,
+        .home .col-10 .content .totalBenfits table .btn-outline-info,
+        .home .col-10 .content .totalBenfits table .btn-outline-danger {
           width: 95%;
           padding: 8px;
           margin: 10px auto; }
-        .home .col-10 .content .table th,
-        .home .col-10 .content .table td {
+        .home .col-10 .content .benfits table th,
+        .home .col-10 .content .benfits table td,
+        .home .col-10 .content .paid table th,
+        .home .col-10 .content .paid table td,
+        .home .col-10 .content .totalBenfits table th,
+        .home .col-10 .content .totalBenfits table td {
           font-size: 10px; } }
-    .home .col-10 .content .head .form-group {
+    .home .col-10 .content .benfits .head .form-group,
+    .home .col-10 .content .paid .head .form-group,
+    .home .col-10 .content .totalBenfits .head .form-group {
       display: inline-block;
       margin-left: 10px; }
-      .home .col-10 .content .head .form-group label {
+      .home .col-10 .content .benfits .head .form-group label,
+      .home .col-10 .content .paid .head .form-group label,
+      .home .col-10 .content .totalBenfits .head .form-group label {
         color: #192A3E;
         font-weight: normal;
         font-size: 14px; }
-      .home .col-10 .content .head .form-group .form-control {
+      .home .col-10 .content .benfits .head .form-group .form-control,
+      .home .col-10 .content .paid .head .form-group .form-control,
+      .home .col-10 .content .totalBenfits .head .form-group .form-control {
         border-radius: 4px;
         background-color: #FFF;
         border: 2px solid rgba(51, 77, 110, 0.5);
         height: 46px; }
-    .home .col-10 .content .head .btn {
+    .home .col-10 .content .benfits .head .btn,
+    .home .col-10 .content .paid .head .btn,
+    .home .col-10 .content .totalBenfits .head .btn {
       padding: 10px 40px !important;
       height: 46px;
       cursor: pointer;
@@ -219,22 +296,69 @@ body {
       background-color: #2ED47A;
       box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
       border: none; }
-      .home .col-10 .content .head .btn i {
+      .home .col-10 .content .benfits .head .btn i,
+      .home .col-10 .content .paid .head .btn i,
+      .home .col-10 .content .totalBenfits .head .btn i {
         margin-left: 10px; }
     @media screen and (max-width: 1024px) {
-      .home .col-10 .content .head .btn {
+      .home .col-10 .content .benfits .head .btn,
+      .home .col-10 .content .paid .head .btn,
+      .home .col-10 .content .totalBenfits .head .btn {
         padding: unset !important; } }
     @media screen and (max-width: 590px) {
-      .home .col-10 .content .head .form-group,
-      .home .col-10 .content .head .btn {
+      .home .col-10 .content .benfits .head .form-group,
+      .home .col-10 .content .benfits .head .btn,
+      .home .col-10 .content .paid .head .form-group,
+      .home .col-10 .content .paid .head .btn,
+      .home .col-10 .content .totalBenfits .head .form-group,
+      .home .col-10 .content .totalBenfits .head .btn {
         width: 95% !important;
         display: block !important;
         margin: 25px auto;
         margin-left: 0; } }
-    .home .col-10 .content .head .form-group,
-    .home .col-10 .content .head .btn {
-      width: 30%; }
+    .home .col-10 .content .benfits .head .form-group,
+    .home .col-10 .content .benfits .head .btn,
+    .home .col-10 .content .paid .head .form-group,
+    .home .col-10 .content .paid .head .btn,
+    .home .col-10 .content .totalBenfits .head .form-group,
+    .home .col-10 .content .totalBenfits .head .btn {
+      width: 23%; }
 
+@media screen and (max-width: 1366px) {
+  .home .col-10 header .bg-light {
+    width: 99%; }
+
+  .home .col-10 .navigate {
+    position: relative;
+    top: 65px;
+    right: 157px;
+    margin: 0 0 30px 0;
+    z-index: 98;
+    width: 103%;
+    background-color: #FFF;
+    height: 60px; } }
+@media screen and (max-width: 1024px) {
+  .home .col-10 .navigate {
+    position: relative;
+    top: 65px;
+    right: 115px;
+    margin: 0 0 30px 0;
+    z-index: 98;
+    width: 104%;
+    background-color: #FFF;
+    height: 60px; }
+
+  .home .col-10 .navigate ul li {
+    width: 170px; }
+
+  .home .col-10 .content .benfits .head .form-group,
+  .home .col-10 .content .benfits .head .btn,
+  .home .col-10 .content .paid .head .form-group,
+  .home .col-10 .content .paid .head .btn,
+  .home .col-10 .content .totalBenfits .head .form-group,
+  .home .col-10 .content .totalBenfits .head .btn {
+    width: 22.5%;
+    font-size: 12px; } }
 @media screen and (max-width: 590px) {
   .home .col-10 .content {
     left: -28%; }
@@ -243,14 +367,30 @@ body {
     flex: 0 0 24.666667%;
     max-width: 24.666667%; }
 
-  .home .col-2 aside ul {
-    margin: 30px 0; }
+  .home .col-10 header .bg-light {
+    width: 97%; }
 
   .home .col-10 header .bg-light ul {
-    margin: 0 auto;
+    margin: auto !important;
     text-align: center; }
 
   .home .col-10 header .bg-light .mr-auto {
-    text-align: center; } }
+    margin-right: unset !important;
+    text-align: center;
+    margin: auto !important; }
 
-/*# sourceMappingURL=agri.css.map */
+  .home .col-10 .navigate ul {
+    width: 100%; }
+
+  .home .col-10 .navigate {
+    width: 102%;
+    right: 25%; }
+
+  .home .col-10 .navigate ul li {
+    width: 33%;
+    font-size: 13px; }
+
+  .home .col-2 aside ul li {
+    width: 15vh; } }
+
+/*# sourceMappingURL=benfits.css.map */
