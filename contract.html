@@ -94,13 +94,19 @@
                                             <tr>
                                                 <th scope="row">1</th>
                                                 <td>
-                                                    <button class="btn btn-outline-info l"><span class="d-block">عرض</span> <span class="d-block"> لعقد</span> اصورة </button>
+                                                    <a href="#contract" style="text-decoration: none;color: #2ED47A">
+                                                        <button class="btn btn-outline-info l"><span class="d-block">عرض</span> <span class="d-block"> لعقد</span> اصورة </button>
+                                                    </a>
                                                 </td>
                                                 <td></td>
                                                 <td></td>
                                                 <td class="text-center">
-                                                    <button class="btn btn-outline-info">اضافه</button>
-                                                    <button class="btn btn-outline-danger">حذف</button>
+                                                    <a href="#modify" style="text-decoration:none;color: #2ED47A; ">
+                                                        <button class="btn btn-outline-info"><span>تعديل</span></button>
+                                                    </a>
+                                                    <a href="#delete" style="text-decoration: none;color:#F76858;">
+                                                        <button class="btn btn-outline-danger">حذف</button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -114,7 +120,63 @@
             </div>
         </div>
     </section>
-
+    <div id="contract" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <form class="load">
+                <label style="cursor: pointer;">تحميل صورة العقد 
+                <input class="d-none" type="file" name="" accept="">
+            </label>
+            </form>
+            <div class="text-center mt-3">
+                <img src="" alt="image view">
+            </div>
+        </div>
+    </div>
+    <div id="delete" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات العقد بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                                     نعم
+                                 </button>
+                <button style="color: #F76858;">
+                                        لا
+                                </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <form class="col-12">
+                        <div class="form-group">
+                            <label for="my-input">رفع صورة للعقد</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">تاريخ بدأ العقد</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">تاريخ إنتهاء العقد</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

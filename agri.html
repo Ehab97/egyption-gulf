@@ -70,7 +70,7 @@
 
                                         <button class="btn btn-info">
                                                     <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                إضافة مستأجر جديد
+                                                                إضافة ارض جديد
                                                 
                                         </button>
                                     </div>
@@ -93,8 +93,12 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td class="text-center">
-                                                    <button class="btn btn-outline-info"><span>اضافه</span></button>
-                                                    <button class="btn btn-outline-danger">حذف</button>
+                                                    <a href="#modify" style="text-decoration:none;color: #2ED47A; ">
+                                                        <button class="btn btn-outline-info"><span>اضافه</span></button>
+                                                    </a>
+                                                    <a href="#delete" style="text-decoration: none;color:#F76858;">
+                                                        <button class="btn btn-outline-danger">حذف</button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -108,7 +112,45 @@
             </div>
         </div>
     </section>
-
+    <div id="delete" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات الارض بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                                 نعم
+                             </button>
+                <button style="color: #F76858;">
+                                    لا
+                            </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <form class="col-12">
+                        <div class="form-group">
+                            <label for="my-input">موقع الارض /العنوان</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">حجم الارض</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
