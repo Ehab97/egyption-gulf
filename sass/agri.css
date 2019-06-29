@@ -290,7 +290,7 @@ body {
   }
   .home .col-10 .content .table th,
   .home .col-10 .content .table td {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
@@ -346,6 +346,116 @@ body {
 .home .col-10 .content .head .form-group,
 .home .col-10 .content .head .btn {
   width: 30%;
+}
+
+.overlay {
+  visibility: hidden;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  min-height: 350vh;
+}
+
+.overlay:target {
+  visibility: visible;
+}
+
+.overlay .cancel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay .modals {
+  top: -20%;
+  width: 850px;
+  border-radius: 4px;
+  background-color: #FFF;
+  max-width: 80%;
+  padding: 60px 30px;
+  position: relative;
+}
+
+.overlay .modals .close {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 18px;
+  color: #F76858;
+  text-decoration: none;
+}
+
+.overlay .modals .close i {
+  color: #F76858;
+  margin-right: 10px;
+}
+
+#modify .modals {
+  width: 50%;
+  top: -40%;
+}
+
+#modify .modals .form-group {
+  margin-bottom: 30px;
+}
+
+#modify .modals .form-group label {
+  color: #192A3E;
+  font-family: "Cairo SemiBold";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#modify .modals .form-group input {
+  height: 40px;
+  border-radius: 4px;
+  background-color: #FFF;
+  border: 2px solid rgba(51, 77, 110, 0.5);
+}
+
+#modify .modals .form-group button {
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #2ED47A;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+  border: none;
+  color: #fff;
+  width: 50%;
+}
+
+#delete .modals {
+  width: 40%;
+  top: -40%;
+}
+
+#delete .modals p {
+  color: #192A3E;
+  font-family: Cairo;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#delete .modals .bt {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#delete .modals .bt button {
+  background-color: #fff;
+  border: none;
+  width: 45%;
+  height: 100%;
 }
 
 @media screen and (max-width: 590px) {

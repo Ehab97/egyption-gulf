@@ -60,13 +60,13 @@
                                 <div class="col-lg-6 col-md-4 col-xs-12">
                                     <button class="btn btn-info">
                                         <i class="fa fa-plus" aria-hidden="true"></i>
-                                                    إضافة مستأجر جديد
+                                                   <a id="rent" href="#renter" style="text-decoration: none;color:#fff;"> إضافة مستأجر جديد</a>
                                     
                                     </button>
                                 </div>
                                 <div class="col-lg-6 col-md-8 col-xs-12">
                                     <div class="row">
-                                        <div class="col-md-6 col-xs-12">
+                                        <!-- <div class="col-md-6 col-xs-12">
                                             <button class="btn btn-outline-info">
                                                         <i class="fa fa-download" aria-hidden="true"></i>
                                                         رفع بيانات من ملف اكسيل
@@ -77,7 +77,7 @@
                                                 <i class="fa fa-upload" aria-hidden="true"></i>
                                                 استخراج بيانات في ملف اكسيل
                                         </button>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                 </div>
@@ -131,14 +131,18 @@
                                                 </label>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-info">
-                                                    عرض بيانات المستأجر
-                                            </button>
+                                            <a href="#data" style="text-decoration: none;color:#2ED47A;">
+                                                <button class="btn btn-outline-info">
+                                                             عرض بيانات المستأجر
+                                                            </button>
+                                            </a>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            <a href="#modify" style="text-decoration:none;color:#FFB946; ">
+                                                <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            </a>
                                         </div>
-                                        <a href="" class="link text-center">حذق بيانات المستخدم</a>
+                                        <a href="#delete" class="link text-center">حذق بيانات المستخدم</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-xs-12">
@@ -186,14 +190,18 @@
                                                     </label>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-info">
-                                                        عرض بيانات المستأجر
+                                            <a href="#data" style="text-decoration: none;color:#2ED47A;">
+                                                <button class="btn btn-outline-info">
+                                                             عرض بيانات المستأجر
                                                 </button>
+                                            </a>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            <a href="#modify" style="text-decoration:none;color:#FFB946; ">
+                                                <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            </a>
                                         </div>
-                                        <a href="" class="link text-center">حذق بيانات المستخدم</a>
+                                        <a href="#delete" class="link text-center">حذق بيانات المستخدم</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-6 col-xs-12">
@@ -241,14 +249,18 @@
                                                         </label>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-info">
-                                                            عرض بيانات المستأجر
+                                            <a href="#data" style="text-decoration: none;color:#2ED47A;">
+                                                <button class="btn btn-outline-info">
+                                                     عرض بيانات المستأجر
                                                     </button>
+                                            </a>
                                         </div>
                                         <div class="butons text-center">
-                                            <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            <a href="#modify" style="text-decoration:none;color:#FFB946; ">
+                                                <button class="btn btn-outline-warning">تعديل بيانات المستأجر</button>
+                                            </a>
                                         </div>
-                                        <a href="" class="link text-center">حذق بيانات المستخدم</a>
+                                        <a href="#delete" class="link text-center">حذق بيانات المستخدم</a>
                                     </div>
                                 </div>
                             </div>
@@ -260,6 +272,601 @@
             </div>
         </div>
     </section>
+    <div id="delete" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات المستاجر بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                             نعم
+                         </button>
+                <button style="color: #F76858;">
+                                لا
+                        </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>الاسم</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>محل الاقامه</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>المشروع قائم ب</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>المحافظه</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>التليفون </label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label> التاريخ</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>الرقم القومي</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>نظام الدفع</h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               قسط
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               نقد
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>وقت المشروع </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   شهور
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   سنوات
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>نظام الزراعه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   استشاري
+                                    </label>
+                            <input class="form-check-input" type="checkbox" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   تقليدي
+                                    </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>موقع المشروع </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   الفيوم
+                                    </label>
+                            <input class="form-check-input" type="checkbox" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   الوادي
+                                    </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                       المنيا
+                                        </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>المنزل </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   عباره عن قطعة ارض
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                  منزل مجهز
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>الحاله الاجتماعيه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   اعزب
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   متزوج
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق استصلاح ارض صحراويه فيما سبق </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   نعم
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   لا
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق التقدم لمشوعات سابقه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   نعم
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                                   لا
+                                    </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> موقع المشروع القادم الي تقدمت اليه ؟ </h5>
+                    </div>
+
+                    <div class="form-group col-md-6 col-xs-12">
+
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> رسالتك </h5>
+                    </div>
+
+                    <div class="form-group col-12">
+
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-12 text-center">
+                        <button type="submit" class="btn btn-info">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="data" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label> :الاسم</label>
+
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>محل الاقامه: </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>المشروع قائم ب:</label>
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>: المحافظه</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>التليفون :</label>
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>: التاريخ</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>الرقم القومي :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> :نظام الدفع</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>وقت المشروع :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>:نظام الزراعه </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>موقع المشروع :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>المنزل :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>الحاله الاجتماعيه :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق استصلاح ارض صحراويه فيما سبق : </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق التقدم لمشوعات سابقه : </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> موقع المشروع القادم الي تقدمت اليه :</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>: رسالتك </h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="renter" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>الاسم</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>محل الاقامه</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>المشروع قائم ب</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>المحافظه</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>التليفون </label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label> التاريخ</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-xs-12">
+                        <label>الرقم القومي</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>نظام الدفع</h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                           قسط
+                            </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                           نقد
+                            </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>وقت المشروع </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               شهور
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               سنوات
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>نظام الزراعه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               استشاري
+                                </label>
+                            <input class="form-check-input" type="checkbox" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               تقليدي
+                                </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>موقع المشروع </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               الفيوم
+                                </label>
+                            <input class="form-check-input" type="checkbox" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               الوادي
+                                </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                   المنيا
+                                    </label>
+                            <input class="form-check-input" type="checkbox" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>المنزل </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               عباره عن قطعة ارض
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                              منزل مجهز
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>الحاله الاجتماعيه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               اعزب
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               متزوج
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق استصلاح ارض صحراويه فيما سبق </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               نعم
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               لا
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>سبق التقدم لمشوعات سابقه </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               نعم
+                                </label>
+                            <input class="form-check-input" type="radio" value="option1">
+                        </div>
+                        <div class="form-check form-check-inline">
+
+                            <label class="form-check-label">
+                               لا
+                                </label>
+                            <input class="form-check-input" type="radio" value="option2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> موقع المشروع القادم الي تقدمت اليه ؟ </h5>
+                    </div>
+
+                    <div class="form-group col-md-6 col-xs-12">
+
+                        <input type="text" class="form-control">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5> رسالتك </h5>
+                    </div>
+
+                    <div class="form-group col-12">
+
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-12 text-center">
+                        <button type="submit" class="btn btn-info">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.1.1.min.js"></script>
