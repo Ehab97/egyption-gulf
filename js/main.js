@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
     // const mq = window.matchMedia("(min-width: 500px)");
     var tabColor = document.querySelectorAll('.navigate ul li');
+    var overlay = document.querySelectorAll('.overlay');
+    var body = document.body,
+        html = document.documentElement;
+    var height = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+    // console.log(overlay);
+    // for (let i = 0; i < overlay.length; ++i) {
+    //     console.log(overlay[i].clientHeight);
+    // }
+    // console.log(height);
+    var newheight = height + 400;
+    for (let i = 0; i < overlay.length; ++i) {
+        overlay[i].style.height = newheight + 'px';
+    }
+
+    // for (let i = 0; i < overlay.length; ++i) {
+    //     console.log(overlay[i].clientHeight);
+    // }
+    // console.log(newheight);
     var ChangeTapColor = function() {
         for (let i = 0; i < tabColor.length; ++i) {
             tabColor[i].onclick = () => {

@@ -311,7 +311,7 @@
     align-items: center;
     justify-content: center;
     z-index: 100000;
-    height: 350vh;
+    // height: 350vh;
     &:target {
         visibility: visible;
     }
@@ -321,7 +321,7 @@
         position: absolute;
     }
     .modals {
-        top: -20%;
+        top: 0% !important;
         width: 850px;
         border-radius: 4px;
         background-color: #FFF;
