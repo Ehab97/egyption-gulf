@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="images/favicon/logo.png">
+    <title>Login</title>
+</head>
+
+<body>
+    <section class="login-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 m-auto text-center">
+                    <img src="imgaes/favicon/logo.png" alt="Logo">
+                </div>
+                <div class="col-12 m-auto">
+                <form  action="{{route('login')}}" method="post">
+                    {{csrf_field()}}
+                        <div class="container">
+                            <h3 class="text-center">تسجيل الدخول</h3>
+                            <div class="form-group">
+                                <label>البريد الاكتروني أو رقم الهاتف</label>
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>كلمة المرور</label>
+                                <input type="password"  name="password" class="form-control">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label">
+                                الحفاظ على تسجيل الدخول؟
+                            </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-success" value="تسجيل الدخول">
+                            </div>
+                            <div class="text">
+                                <p>لا تملك حساب بعد؟ <a href="signup.html">قد بانشاء حساب</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+</html>

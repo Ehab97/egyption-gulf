@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/benfits.css">
+    <link rel="shortcut icon" href="images/favicon/logo.png">
+    <title>Benfits</title>
+</head>
+
+<body>
+    <section class="home">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <aside>
+                        <div class="text-center m-auto">
+                            <img src="imgaes/favicon/logo.png" alt="logo">
+                        </div>
+                        <hr/>
+                        <ul class="list-unstyled">
+                            <li><a href="home"><i class="fa fa-home fa-lg" aria-hidden="true"></i>الصفحه الرئيسيه</a></li>
+                            <li><a href="renters"><i class="fa fa-users fa-lg" aria-hidden="true"></i>المستاجرين</a></li>
+                            <li><a href="agri"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>الاراضي الزارعيه</a></li>
+                            <li><a href="contract"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i>العقود</a></li>
+                            <li class="active"><a style="color: #2ED47A" href="benfits.html"><i   style="color: #2ED47A"   class="fa fa-money fa-lg" aria-hidden="true"></i>الالحسابات الماليه</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-10" id="app">
+                    <!-- start header     -->
+                    <header>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <ul class="nav mr-auto">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><strong>اسم الشخص</strong></a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fa fa-power-off"></i> تسجيل الخروج
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <section class="navigate">
+                            <ul class="list-unstyled">
+                                <li @click="benfits=true;paid=false;totalBenfits=false;" class="liActive float-right" style="color: #2ED47A;">العائدات</li>
+                                <li @click="benfits=false;paid=true;totalBenfits=false;" class=" float-right">النفقات</li>
+                                <li @click="benfits=false;paid=false;totalBenfits=true;" class=" float-right">صافي الربح</li>
+                            </ul>
+                        </section>
+                    </header>
+                    <section class="content">
+                        <div class="container-fluid">
+                            <!-- benfits -->
+                            <div class="row benfits" v-show="benfits">
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <div class="head">
+                                            <div class="form-group">
+                                                <label>كمية المال</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>وصف</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>التاريخ</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <button class="btn btn-info">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                إضافة عائد جديد                  
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">كمية المال</th>
+                                                    <th scope="col">وصف</th>
+                                                    <th scope="col">التاريخ</th>
+                                                    <th scope="col">حذف/اضافه</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-center">
+                                                        <a href="#modify1"><button class="btn btn-outline-info">تعديل</button></a>
+                                                        <a href="#delete1"><button class="btn btn-outline-danger">حذف</button></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- paid -->
+                            <div class="row paid" v-show="paid">
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <div class="head">
+                                            <div class="form-group">
+                                                <label>كمية المال</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>وصف</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>التاريخ</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <button class="btn btn-info">
+                                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        إضافة عائد جديد                  
+                                                    </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">كمية المال</th>
+                                                    <th scope="col">وصف</th>
+                                                    <th scope="col">التاريخ</th>
+                                                    <th scope="col">حذف/اضافه</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-center">
+                                                        <a href="#modify2"><button class="btn btn-outline-info">تعديل</button></a>
+                                                        <a href="#delete2"><button class="btn btn-outline-danger">حذف</button></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- total benfits -->
+                            <div class="row totalBenfits" v-show="totalBenfits">
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <div class="head">
+                                            <div class="form-group">
+                                                <label>بحث من تاريخ</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>الى تاريخ</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <button class="btn btn-info">
+                                                                                                               بحث                  
+                                                    </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="col-12">
+                                        <table class="table table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">العائد </th>
+                                                    <th scope="col">صافي الربح</th>
+                                                    <th scope="col">النفقه </th>
+                                                    <th scope="col"> التاريخ </th>
+                                                    <th scope="col">حذف/تعديل</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-center">
+                                                        <a href="#modify3"><button class="btn btn-outline-info">تعديل</button></a>
+                                                        <a href="#delete3"><button class="btn btn-outline-danger">حذف</button></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="delete1" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات العائد بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                                         نعم
+                                     </button>
+                <button style="color: #F76858;">
+                                            لا
+                                    </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify1" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <form class="col-12">
+                        <div class="form-group">
+                            <label for="my-input">كمية المال</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">الوصف</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">التاريخ</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="delete2" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات النفقه بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                                         نعم
+                                     </button>
+                <button style="color: #F76858;">
+                                            لا
+                                    </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify2" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <form class="col-12">
+                        <div class="form-group">
+                            <label for="my-input">كمية المال</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">الوصف</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">التاريخ</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="delete3" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <p>هل تريد حذق بيانات العاءد بالكامل؟</p>
+            <hr/>
+            <div class="bt">
+                <button style="color: #2ED47A;">
+                                         نعم
+                                     </button>
+                <button style="color: #F76858;">
+                                            لا
+                                    </button>
+            </div>
+        </div>
+    </div>
+    <div id="modify3" class="overlay">
+        <a href="#" class="cancel"></a>
+        <div class="modals">
+            <a href="#" class="close">الغاء<i class="fa fa-times"></i></a>
+            <div class="container">
+                <div class="row">
+                    <form class="col-12">
+                        <div class="form-group">
+                            <label for="my-input">العائد </label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">النفقه</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">صافي الربح</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label for="my-input">التاريخ</label>
+                            <input id="my-input" class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="">تعديل</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+</html>

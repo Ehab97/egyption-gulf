@@ -1,0 +1,119 @@
+@import 'variables';
+@import 'mixins';
+//body
+@include body;
+.login-content,
+.signup-content {
+    margin: 50px auto;
+    img {
+        margin-bottom: 50px;
+    }
+    form {
+        padding: 50px;
+        width: 60%;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: #FFF;
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.06);
+        h3 {
+            margin-bottom: 50px;
+            color: $black;
+            font-size: $FMS;
+            line-height: 45px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 50px;
+            label {
+                font-weight: 600;
+                color: $black;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: right;
+            }
+            .form-control {
+                height: 46px;
+                border-radius: 4px;
+                background-color: #FFF;
+                border: 2px solid rgba(51, 77, 110, 0.5);
+            }
+            .btn-success {
+                background-color: $green;
+                width: 100%;
+                border-radius: 4px;
+                box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                margin-bottom: 15px;
+                border: none;
+                padding: 8px 0;
+            }
+        }
+        .form-check {
+            margin-bottom: 50px;
+            label {
+                color: $blue;
+                font-size: 14px;
+                line-height: 26px;
+                text-align: right;
+                font-weight: 700;
+                margin-right: 32px;
+            }
+            .form-check-input,
+            input {
+                box-sizing: border-box;
+                height: 22px;
+                width: 22px;
+                border-radius: 4px;
+                background-color: #FFF;
+                border: 1.5px solid rgba(51, 77, 110, 0.5);
+            }
+            .custom-control-label:before {
+                background-color: #FFF;
+            }
+        }
+        .text {
+            text-align: center;
+            p {
+                color: $blue;
+                font-size: 14px;
+                line-height: 26px;
+                a {
+                    text-decoration: none;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .login-content form,
+    .signup-content form {
+        width: 95%;
+        padding: 30px 30px;
+        h3 {
+            font-size: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-content form,
+    .signup-content form {
+        width: 95%;
+        padding: 20px 15px;
+        h3 {
+            font-size: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .login-content form,
+    .signup-content form {
+        width: 95%;
+        padding: 20px 15px;
+        h3 {
+            font-size: 20px;
+        }
+    }
+}

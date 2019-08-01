@@ -1,0 +1,33 @@
+    @import 'variables';
+    @import 'mixins';
+    //body
+    @include body;
+    .active {
+        @include active;
+        a {
+            color: #2ED47A;
+        }
+    }
+    
+    .home {
+        padding: 0;
+        .col-2 {
+            @include sidebar;
+        }
+        .col-10 {
+            header {
+                @include header;
+            }
+        }
+        @media screen and (max-width: 1366px) {}
+        @media screen and (max-width: 1024px) {}
+        @media screen and (max-width: 590px) {
+            .home .col-10 .content {
+                left: -28%;
+            }
+            .home .col-2 {
+                flex: 0 0 24.666667%;
+                max-width: 24.666667%;
+            }
+        }
+    }

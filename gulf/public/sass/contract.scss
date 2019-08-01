@@ -1,0 +1,174 @@
+    @import 'variables';
+    @import 'mixins';
+    //body
+    @include body;
+    .active {
+        @include active;
+        a {
+            color: #2ED47A;
+        }
+    }
+    
+    .home {
+        padding: 0;
+        .col-2 {
+            @include sidebar;
+        }
+        .col-10 {
+            header {
+                @include header;
+            }
+            .content {
+                position: relative;
+                z-index: 90;
+                left: -25%;
+                top: 60px;
+                bottom: 60px;
+                width: 90%;
+                table {
+                    .l {
+                        width: 60% !important;
+                    }
+                    @include table;
+                }
+                .head {
+                    @include head;
+                    .form-group,
+                    .btn {
+                        width: 23%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .overlay {
+        @include modal;
+    }
+    
+    #contract {
+        .modals {
+            top: -40%;
+            .load {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                font-size: 18px;
+                color: #2ED47A;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    #modify {
+        .modals {
+            width: 50%;
+            top: -40%;
+            .form-group {
+                margin-bottom: 30px;
+                label {
+                    color: #192A3E;
+                    font-family: "Cairo SemiBold";
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                input {
+                    height: 40px;
+                    border-radius: 4px;
+                    background-color: #FFF;
+                    border: 2px solid rgba(51, 77, 110, 0.5);
+                }
+                button {
+                    height: 40px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    background-color: #2ED47A;
+                    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                    border: none;
+                    color: #fff;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
+    #delete {
+        .modals {
+            width: 40%;
+            top: -40%;
+            p {
+                color: #192A3E;
+                font-family: Cairo;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+            }
+            .bt {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                button {
+                    background-color: #fff;
+                    border: none;
+                    width: 45%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1366px) {}
+    
+    @media screen and (max-width: 1024px) {
+        .col-10 .content .head .btn {
+            font-size: 12px !important;
+        }
+        .home .col-10 .content table .l {
+            width: 100% !important;
+            font-size: 12px !important;
+        }
+    }
+    
+    @media screen and (max-width: 590px) {
+        .home .col-10 .content {
+            left: -28%;
+            contain: content;
+            object-fit: contain;
+        }
+        .home .col-2 {
+            flex: 0 0 24.666667%;
+            max-width: 24.666667%;
+        }
+        .home .col-10 .content table .l {
+            font-size: 8px !important;
+            width: 90% !important;
+            margin: 35% auto;
+        }
+        .head .btn {
+            font-size: 10px !important;
+        }
+        .home .col-2 aside ul li {
+            width: 14vh;
+            ;
+        }
+        .home .col-10 header .bg-light ul {
+            margin: 0 auto;
+            text-align: center
+        }
+        .home .col-10 header .bg-light .mr-auto {
+            // margin-right: 0 !important;
+            text-align: center;
+        }
+        .home .col-10 .content table .btn-outline-info,
+        .home .col-10 .content table .btn-outline-danger {
+            width: 95%;
+            padding: 5px;
+            margin: 10px auto;
+            font-size: 10px;
+        }
+        .home .col-10 .content table th,
+        .home .col-10 .content table td {
+            font-size: 8px;
+        }
+    }

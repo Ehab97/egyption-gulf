@@ -1,0 +1,14 @@
+body {
+  background-color: aqua;
+}
+
+body div {
+  background-color: blueviolet;
+  width: 250px;
+  height: 250px;
+}
+
+body div:hover {
+  background-color: chocolate;
+  transition: .5s ease-in-out;
+}

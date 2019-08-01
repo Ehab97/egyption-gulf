@@ -1,0 +1,248 @@
+        @import 'variables';
+        @import 'mixins';
+        //body
+        @include body;
+        .active {
+            @include active;
+            a {
+                color: #2ED47A;
+            }
+        }
+        
+        .btn {
+            padding: 10px 40px !important;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .home {
+            padding: 0;
+            .col-2 {
+                @include sidebar;
+            }
+            .col-10 {
+                header {
+                    @include header;
+                }
+                .content {
+                    position: relative;
+                    z-index: 90;
+                    left: -25%;
+                    top: 60px;
+                    bottom: 60px;
+                    width: 90%;
+                    .btn-info {
+                        border-radius: 4px;
+                        background-color: #2ED47A;
+                        box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                        border: none;
+                        i {
+                            margin-left: 10px;
+                        }
+                    }
+                    .btn-outline-info {
+                        color: #2ED47A;
+                        border-radius: 4px;
+                        background-color: #FFF;
+                        border: 2px solid #2ED47A;
+                        padding: 8px 24px !important;
+                        i {
+                            margin-left: 10px;
+                        }
+                    }
+                    .card {
+                        margin: 40px auto;
+                        border-radius: 4px;
+                        background-color: #FFF;
+                        box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                        padding: 30px;
+                        .line {
+                            width: 100%;
+                            margin: 10px auto;
+                            label {
+                                color: #192A3E;
+                                font-size: 14px;
+                                font-weight: 700;
+                                span {
+                                    color: #334D6E;
+                                    font-weight: normal;
+                                    font-size: 14px;
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                        .butons {
+                            .btn {
+                                width: 95%;
+                                ;
+                                padding: 15px 0 !important;
+                                margin-bottom: 10px;
+                                font-size: 14px !important;
+                            }
+                            .btn-outline-warning {
+                                border-radius: 4px;
+                                color: #FFB946;
+                                background-color: #FFF;
+                                border: 2px solid #FFB946;
+                                box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                                &:hover {
+                                    color: #FFB946;
+                                }
+                            }
+                        }
+                        .link {
+                            color: #F76858;
+                            text-decoration: none;
+                            font-size: 12px;
+                            margin: 25px auto;
+                        }
+                    }
+                }
+            }
+        }
+        
+        #data {
+            h5 {
+                margin-bottom: 50px;
+            }
+            .modals {
+                top: -30%;
+            }
+        }
+        
+        #delete {
+            .modals {
+                width: 40%;
+                top: -40%;
+                p {
+                    color: #192A3E;
+                    font-family: Cairo;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                .bt {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    button {
+                        background-color: #fff;
+                        border: none;
+                        width: 45%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        
+        .overlay {
+            @include modal;
+            .form-group {
+                margin-bottom: 30px;
+                label {
+                    color: #192A3E;
+                    font-family: "Cairo SemiBold";
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                input {
+                    height: 40px;
+                    border-radius: 4px;
+                    background-color: #FFF;
+                    border: 2px solid rgba(51, 77, 110, 0.5);
+                }
+            }
+            h5 {
+                color: #192A3E;
+                font-size: 14px;
+                font-weight: 600;
+                margin: 20px 0;
+            }
+            .choose {
+                margin-left: 15px;
+            }
+            textarea {
+                border-radius: 4px;
+                background-color: #FFF;
+                border: 2px solid rgba(51, 77, 110, 0.5);
+            }
+            .form-check-inline {
+                margin-left: 25px;
+                margin-bottom: 30px;
+                input[type=checkbox],
+                input[type=radio] {
+                    box-sizing: border-box;
+                    padding: 0;
+                    top: 5px;
+                    left: 20px;
+                }
+            }
+            .btn-info {
+                height: 46px;
+                border-radius: 4px;
+                background-color: #2ED47A;
+                border: 2px solid #2ED47A;
+                box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+            }
+        }
+        
+        @media screen and (max-width: 1366px) {
+            .home .col-10 .content {
+                position: relative;
+                z-index: 90;
+                left: -18%;
+                top: 60px;
+                bottom: 60px;
+                width: 95%;
+            }
+            .home .col-10 .content .btn-outline-info {
+                width: 190px;
+                font-size: 11px;
+                padding: 10px 15px !important;
+            }
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .home .col-10 .content {
+                width: 100%;
+            }
+            .home .col-10 .content .btn-info {
+                width: 190px;
+                text-align: center;
+                padding: 10px 24px !important;
+            }
+        }
+        
+        @media screen and (max-width: 590px) {
+            .btn {
+                margin: 30px auto;
+            }
+            .home .col-10 header .bg-light ul {
+                margin: 0 auto;
+                text-align: center
+            }
+            .home .col-10 header .bg-light .mr-auto {
+                // margin-right: 0 !important;
+                text-align: center;
+            }
+            .home .col-10 .content {
+                left: -24%;
+                text-align: center;
+            }
+            .home .col-2 {
+                flex: 0 0 24.666667%;
+                max-width: 24.666667%;
+            }
+            .home .col-10 .content .card {
+                text-align: right;
+                width: 95%;
+                margin: 30px 15px;
+            }
+            .home .col-10 .content .btn {
+                margin: 15px auto;
+                width: 85% !important;
+            }
+            .home .col-10 .content .card .butons .btn {
+                width: 95% !important;
+            }
+        }

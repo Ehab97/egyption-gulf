@@ -1,0 +1,225 @@
+    @import 'variables';
+    @import 'mixins';
+    //body
+    @include body;
+    .active {
+        @include active;
+        a {
+            color: #2ED47A;
+        }
+    }
+    
+    .liActive {
+        @include liactive;
+    }
+    
+    #modify1,
+    #modify2,
+    #modify3 {
+        .modals {
+            width: 50%;
+            top: -35%;
+            .form-group {
+                margin-bottom: 30px;
+                label {
+                    color: #192A3E;
+                    font-family: "Cairo SemiBold";
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                input {
+                    height: 40px;
+                    border-radius: 4px;
+                    background-color: #FFF;
+                    border: 2px solid rgba(51, 77, 110, 0.5);
+                }
+                button {
+                    height: 40px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    background-color: #2ED47A;
+                    box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.06);
+                    border: none;
+                    color: #fff;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
+    #delete3,
+    #delete2,
+    #delete1 {
+        .modals {
+            width: 40%;
+            top: -40%;
+            p {
+                color: #192A3E;
+                font-family: Cairo;
+                font-size: 16px;
+                font-weight: 700;
+                text-align: center;
+            }
+            .bt {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                button {
+                    background-color: #fff;
+                    border: none;
+                    width: 45%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    .overlay {
+        @include modal;
+    }
+    
+    .home {
+        .container-fluid {
+            // padding-left: 0;
+        }
+        padding: 0;
+        .col-2 {
+            @include sidebar;
+        }
+        .col-10 {
+            header {
+                @include header;
+            }
+            .navigate {
+                position: relative;
+                top: 65px;
+                right: 242px;
+                margin: 0 0 30px 0;
+                z-index: 98;
+                width: 102%;
+                background-color: #FFF;
+                height: 60px;
+                ul {
+                    float: right;
+                    height: 65px;
+                    li {
+                        cursor: pointer;
+                        color: #334D6E;
+                        font-size: 18px;
+                        line-height: 50px;
+                        text-align: center;
+                        height: 60px;
+                        width: 205px;
+                        border-left: 1px solid rgba(128, 128, 128, 0.1);
+                        border-right: 1px solid rgba(128, 128, 128, 0.1);
+                        &:hover {
+                            @include liactive;
+                        }
+                    }
+                }
+            }
+            .content {
+                position: relative;
+                z-index: 90;
+                left: -25%;
+                top: 60px;
+                bottom: 60px;
+                width: 90%;
+                .benfits,
+                .paid,
+                .totalBenfits {
+                    table {
+                        .l {
+                            width: 60% !important;
+                        }
+                        @include table;
+                    }
+                    .head {
+                        @include head;
+                        .form-group,
+                        .btn {
+                            width: 23%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1366px) {
+        .home .col-10 header .bg-light {
+            width: 99%;
+        }
+        .home .col-10 .navigate {
+            position: relative;
+            top: 65px;
+            right: 157px;
+            margin: 0 0 30px 0;
+            z-index: 98;
+            width: 103%;
+            background-color: #FFF;
+            height: 60px;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .home .col-10 .navigate {
+            position: relative;
+            top: 65px;
+            right: 115px;
+            margin: 0 0 30px 0;
+            z-index: 98;
+            width: 104%;
+            background-color: #FFF;
+            height: 60px;
+        }
+        .home .col-10 .navigate ul li {
+            width: 170px;
+        }
+        .home .col-10 .content .benfits .head .form-group,
+        .home .col-10 .content .benfits .head .btn,
+        .home .col-10 .content .paid .head .form-group,
+        .home .col-10 .content .paid .head .btn,
+        .home .col-10 .content .totalBenfits .head .form-group,
+        .home .col-10 .content .totalBenfits .head .btn {
+            width: 22.5%;
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (max-width: 590px) {
+        .home .col-10 .content {
+            left: -28%;
+        }
+        .home .col-2 {
+            flex: 0 0 24.666667%;
+            max-width: 24.666667%;
+        }
+        .home .col-10 header .bg-light {
+            width: 97%;
+        }
+        .home .col-10 header .bg-light ul {
+            margin: auto!important;
+            text-align: center
+        }
+        .home .col-10 header .bg-light .mr-auto {
+            margin-right: unset !important;
+            text-align: center;
+            margin: auto!important;
+        }
+        .home .col-10 .navigate ul {
+            width: 100%;
+        }
+        .home .col-10 .navigate {
+            width: 102%;
+            right: 25%;
+        }
+        .home .col-10 .navigate ul li {
+            width: 33%;
+            font-size: 13px;
+        }
+        .home .col-2 aside ul li {
+            width: 15vh;
+        }
+    }
