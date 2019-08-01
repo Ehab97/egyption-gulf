@@ -42,13 +42,6 @@ body {
   transition: .4s ease-in-out;
 }
 
-#modify1 .modals,
-#modify2 .modals,
-#modify3 .modals {
-  width: 50%;
-  top: -35%;
-}
-
 #modify1 .modals .form-group,
 #modify2 .modals .form-group,
 #modify3 .modals .form-group {
@@ -87,13 +80,6 @@ body {
   width: 50%;
 }
 
-#delete3 .modals,
-#delete2 .modals,
-#delete1 .modals {
-  width: 40%;
-  top: -40%;
-}
-
 #delete3 .modals p,
 #delete2 .modals p,
 #delete1 .modals p {
@@ -129,9 +115,6 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 100000;
   min-height: 350vh;
 }
@@ -147,7 +130,7 @@ body {
 }
 
 .overlay .modals {
-  top: -20%;
+  margin: 30px auto;
   width: 850px;
   border-radius: 4px;
   background-color: #FFF;

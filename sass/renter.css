@@ -314,12 +314,12 @@ body {
 }
 
 #data .modals {
-  top: -30%;
+  /*top: -30%;*/
 }
 
 #delete .modals {
-  width: 40%;
-  top: -40%;
+  /*width: 40%;*/
+  /*top: -40%;*/
 }
 
 #delete .modals p {
@@ -351,9 +351,6 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 100000;
   min-height: 350vh;
 }
@@ -369,7 +366,7 @@ body {
 }
 
 .overlay .modals {
-  top: -20%;
+  margin: 30px auto;
   width: 850px;
   border-radius: 4px;
   background-color: #FFF;

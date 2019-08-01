@@ -48,7 +48,7 @@
     
     #contract {
         .modals {
-            top: -40%;
+            // top: -40%;
             .load {
                 position: absolute;
                 top: 25px;
@@ -62,8 +62,8 @@
     
     #modify {
         .modals {
-            width: 50%;
-            top: -40%;
+            //   width: 50%;
+            // top: -40%;
             .form-group {
                 margin-bottom: 30px;
                 label {
@@ -95,8 +95,8 @@
     
     #delete {
         .modals {
-            width: 40%;
-            top: -40%;
+            // width: 40%;
+            //top: -40%;
             p {
                 color: #192A3E;
                 font-family: Cairo;
