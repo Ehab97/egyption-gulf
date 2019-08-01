@@ -101,10 +101,8 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100000; }
+  z-index: 100000;
+  min-height: 350vh; }
   .overlay:target {
     visibility: visible; }
   .overlay .cancel {
@@ -112,7 +110,7 @@ body {
     height: 100%;
     position: absolute; }
   .overlay .modals {
-    top: 0% !important;
+    margin: 30px auto;
     width: 850px;
     border-radius: 4px;
     background-color: #FFF;
@@ -493,4 +491,4 @@ body {
   .home .col-2 aside ul li {
     width: 15vh; } }
 
-/*# sourceMappingURL=benfits.css.map */
+/*# sourceMappingURL=benefits.css.map */

@@ -243,9 +243,6 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 100000;
   min-height: 350vh; }
   .overlay:target {
@@ -255,7 +252,7 @@ body {
     height: 100%;
     position: absolute; }
   .overlay .modals {
-    top: -20%;
+    margin: 30px auto;
     width: 850px;
     border-radius: 4px;
     background-color: #FFF;
